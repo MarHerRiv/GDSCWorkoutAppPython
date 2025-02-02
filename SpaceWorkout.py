@@ -73,10 +73,10 @@ class CreateProfilePage:
             response = model.generate_content(combined_prompt)
             updated_response = (response.text).replace("\n", ", ")
 
-            final_prompt = "Create a workout routine using "+(updated_response)+" as items for a person who is "+age+" and works out for "+workoutlength+" minutes today and "+freq+" days a week. Be concise with your response. It should not exceed 10 lines."
+            final_prompt = "Create a workout routine using "+(updated_response)+" as items for a person who is "+age+" years old and works out for "+workout_length+" minutes today and "+workout_duration+" days a week. Be concise with your response. It should not exceed 10 lines."
             final_response = model.generate_content(final_prompt)
             
-            message = final_response.txt
+            message = (final_response).text
 
             messagebox.showinfo("Workout Information", message)
 
