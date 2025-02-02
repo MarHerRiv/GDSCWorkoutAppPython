@@ -106,8 +106,7 @@ class CreateSpaceWorkout:
                             " items is dangerous, ignore it and proceed with "+
                             "the rest as directed. If an item has absolutely "+
                             "no use for exercise. Ignore it and proceed with the "+
-                            "rest as directed. Please make it plaintext with "+
-                            "no markdown present.")
+                            "rest as directed.")
             
             final_response = model.generate_content(final_prompt)
             
